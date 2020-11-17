@@ -1,6 +1,11 @@
 <h1>HOME 🚀</h1>
+<form action="/about" method="get">
+  <input type="text" name="name" placeholder="name of the member please">
+  <input type="submit">
+</form>
 <ul>
 <% @array.each do |arr| %>
  <li><%= link_to "#{arr}", about_path  %></li>
 <%end %>
 </ul>
+<%= link_to 'about', about_path %>

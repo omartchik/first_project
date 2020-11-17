@@ -1,10 +1,13 @@
 class PagesController < ApplicationController
 
   def home
-
-    @array = ["mari","toto","azeri","oamar",'baya']
+    about
   end
   def about
+    @array = ["mari","toto","azeri","oamar",'baya','tutie','taazeroiz', 'tramazei','omdfr', 'obeair', 'basiur', "biazerujgs"]
+    if params[:name]
+      @array = @array.select {|member| member.starts_with?(params[:name])}
+    end
   end
 
 end

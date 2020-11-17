@@ -1,3 +1,8 @@
 <h1>WELCOME TO MY WEBSITE</h1>
 <h1>WELCOME TO MY WEBSITE</h1>
+<ul>
+<% @array.each do |arr| %>
+ <li><%= link_to "#{arr}", about_path  %></li>
+<%end %>
+</ul>
 <%= link_to "retour à la page d'accueil", root_path %>
